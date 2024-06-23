@@ -9,8 +9,8 @@
     {
         private static readonly HttpClient httpClient = new HttpClient();
 
-        [UnmanagedCallersOnly(EntryPoint = "MakeHttpRequest")]
-        public static unsafe int MakeHttpRequest(IntPtr urlPtr, IntPtr* resultPtr, int* resultSize)
+        [UnmanagedCallersOnly(EntryPoint = "MakeHttpGetRequest")]
+        public static unsafe int MakeHttpGetRequest(IntPtr urlPtr, IntPtr* resultPtr, int* resultSize)
         {
             try
             {
