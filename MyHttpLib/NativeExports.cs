@@ -11,7 +11,7 @@
         private static readonly IServiceCollection services = new ServiceCollection()
             .AddHttpClient();
 
-        private static readonly ServiceProvider serviceProvider = services.BuildServiceProvider();
+        private static readonly IServiceProvider serviceProvider = services.BuildServiceProvider();
 
         [UnmanagedCallersOnly(EntryPoint = "MakeHttpGetRequest")]
         public static unsafe int MakeHttpGetRequest(IntPtr urlPtr, IntPtr* resultPtr, int* resultSize, int* ptrHttpStatusCode)
