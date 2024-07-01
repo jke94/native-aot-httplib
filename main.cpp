@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-// Declaración de las funciones exportadas de la librería compartida
+// Declaration of functions exported from the shared library.
 extern "C" int MakeHttpGetRequest(const char* url, void** resultPtr, int* resultSize, int* httpStatusCode);
 extern "C" void FreeMemory(void* ptr);
 

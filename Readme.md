@@ -12,5 +12,5 @@ dotnet publish -c Release -r linux-x64 --self-contained
 ### 2. Generated C++ client and linked with dynamic library.
 
 ```
-g++ -o main main.cpp /home/javi/Repositories/native-aot-httplib/MyHttpLib/bin/Release/net8.0/linux-x64/publish/MyHttpLib.so -Wl,-rpath,/home/javi/Repositories/native-aot-httplib/MyHttpLib/bin/Release/net8.0/linux-x64/publish/
+g++ -o main main.cpp MyHttpLib/bin/Release/net8.0/linux-x64/publish/MyHttpLib.so -Wl,-rpath,MyHttpLib/bin/Release/net8.0/linux-x64/publish
 ```

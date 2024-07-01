@@ -1,15 +1,18 @@
 ﻿namespace MyHttpLib
 {
+    #region usings
+
     using System;
     using System.Net.Http;
     using System.Runtime.InteropServices;
     using System.Threading.Tasks;
     using Microsoft.Extensions.DependencyInjection;
 
+    #endregion
+    
     public static class NativeExports
     {
-        private static readonly IServiceCollection services = new ServiceCollection()
-            .AddHttpClient();
+        private static readonly IServiceCollection services = new ServiceCollection().AddHttpClient();
 
         private static readonly IServiceProvider serviceProvider = services.BuildServiceProvider();
 
